@@ -270,13 +270,46 @@ main{
   
 }
 
-details {
-  height: 500px;
-  width: 600px;
+.detail {
+  /* background-color: rgb(8, 95, 44); */
+  /* background-image: url("./asset/images/colored-cinema-seamless-pattern-wallpaper_98292-3896.jpg"); */
+  background-image: linear-gradient(red, yellow, green);
+  /* height: 1vh; */
+  /* margin: 0; */
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+
 }
 
-.movieDetail {
-  margin-left: 20%;
-  height: 500px;
-  color: white;
+.moviedetail {
+  cursor: pointer;
+color: white;
+/* text-align: center; */
+justify-content: center;
+display: flex;
+flex-direction: column;
+padding: 50px;
+}
+/* .moviedetail h2{
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+} */
+.moviedetail span{
+  color: red;
+  font-size: 20px;
+}
+h1 a{
+  text-decoration: none;
+  color: gold;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 50px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    display: inline;
+    cursor: pointer;
 }

@@ -27,9 +27,9 @@ const getMovieDetails = () => {
 
       const movieDetails = document.createElement("div");
       movieDetails.classList.add("moviedetail");
-      const movieDate = document.createElement("h2");
-      const movieTitle = document.createElement("h2");
-      const movieRuntime = document.createElement("h2");
+      const movieDate = document.createElement("h3");
+      const movieTitle = document.createElement("h1");
+      const movieRuntime = document.createElement("h3");
       const movieRevenue = document.createElement("span");
 
       movieRevenue.innerText = `Evaluation:$${revenue.toLocaleString()}`;
