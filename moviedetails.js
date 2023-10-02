@@ -9,7 +9,7 @@ const getMovieDetails = () => {
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMmMyZTBhZDczYWYzZTliMTgxNTU0Y2MxMWNlODI5MiIsInN1YiI6IjY1MDk3ZDU1Mzk0YTg3MDBhZGE4ZTg2MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.te-DX3pegO3--0NXSLJe8GwqqaeHE_iyYWmSfuPhqoY",
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NjZmYzA2ZmRlYTg0ZjAwN2UyZTc1M2FjNGZhOGI5ZCIsInN1YiI6IjY1MDFmNjdiZTBjYTdmMDBjYmViMWMxYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cJKBxFmvEY1mKqmbPh9ykKXgvWgeugb5A0R39WXWuqI",
     },
   };
   fetch(url, options)
@@ -18,7 +18,7 @@ const getMovieDetails = () => {
       //   const details = json.genres;
       console.log(json);
 
-      const { title, poster_path, release_date, revenue, runtime } = json;
+      const { title, poster_path, overview, release_date, revenue,  runtime } = json;
       const movieImg = document.querySelector("#detail");
       const img = document.createElement("img");
       img.src = img_url + poster_path;
@@ -29,14 +29,17 @@ const getMovieDetails = () => {
       movieDetails.classList.add("moviedetail");
       const movieDate = document.createElement("h3");
       const movieTitle = document.createElement("h1");
+      const movieOverview = document.createElement("h2");
       const movieRuntime = document.createElement("h3");
       const movieRevenue = document.createElement("span");
 
       movieRevenue.innerText = `Evaluation:$${revenue.toLocaleString()}`;
       movieDate.innerText = `Release date: ${release_date}`;
+      movieOverview.innerText = `Overview: ${overview}`;
       movieTitle.innerText = `Title:${title}`;
-      movieRuntime.innerText = `Runtime: ${runtime} minutes`;
+      movieRuntime.innerText = `Runtime: ${runtime} Minutes`;
       movieDetails.appendChild(movieTitle);
+      movieDetails.appendChild(movieOverview);
       movieDetails.appendChild(movieRuntime);
       movieDetails.appendChild(movieDate);
       movieDetails.appendChild(movieRevenue);
